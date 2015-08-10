@@ -6,8 +6,14 @@
     <property name="build.dir"   value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="${build.dir}/jar"/>
-    <property name="lib.dir" value="lib" />
+    <property name="lib.dir" 	  value="lib" />
     <property name="main-class"  value="center.HelloWorld"/>
+
+    <path id="classpath">
+         <fileset dir="${lib.dir}">
+                <include name="**/*.jar" />
+         </fileset>
+    </path>
     
     <target name="clean">
         <delete dir="${build.dir}"/>
@@ -15,7 +21,9 @@
 
     <target name="compile">
         <mkdir dir="${classes.dir}"/>
-        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+        	<classpath refid="classpath" />
+        </javac>
     </target>
 
     <target name="jar" depends="compile">
