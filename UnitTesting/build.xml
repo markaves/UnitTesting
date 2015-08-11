@@ -42,7 +42,10 @@
 	<target name="test" depends="run">
 		<junit printsummary="yes" showoutput="yes">
 			<classpath refid="classpath" />
-			<test name="tests.MultiplyTest" />
+			<classpath location="${classes.dir}" />	
+			<test name="tests.MultiplyTest" haltonfailure="no" >
+
+			</test>
 		</junit>
 	</target>
 	
