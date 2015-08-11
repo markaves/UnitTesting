@@ -42,7 +42,6 @@
 	<target name="test" depends="run">
 		<junit printsummary="on">
 			<classpath refid="classpath" />
-			<pathelement localtion="${classes.dir}" />
 			<test name="tests.MultiplyTest" />
 		</junit>
 	</target>
