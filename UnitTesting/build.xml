@@ -28,7 +28,7 @@
 
     <target name="jar" depends="compile">
         <mkdir dir="${jar.dir}"/>
-        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+	        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
             <manifest>
                 <attribute name="Main-Class" value="${main-class}"/>
             </manifest>
@@ -40,10 +40,10 @@
    <property file="build.properties"/>
 
 	<target name="test" depends="run">
-		<junit>
+		<junit printsummary="on">
 			<classpath refid="classpath" />
-			<formatter type="brief" usefile="false" />
-			<test name="MultiplyTest" />
+			<pathelement localtion="${classes.dir}" />
+			<test name="tests.MultiplyTest" />
 		</junit>
 	</target>
 	
