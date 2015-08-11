@@ -42,10 +42,7 @@
 	<target name="test" depends="run">
 		<junit printsummary="yes" showoutput="yes">
 			<classpath refid="classpath" />
-			<fileset dir="${src.dir}">
-				<include name="AllTests.java"/>
-			</fileset>	
-				
+			<test name="tests.MultiplyTest" />
 		</junit>
 	</target>
 	
