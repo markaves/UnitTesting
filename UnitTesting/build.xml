@@ -43,7 +43,7 @@
 		<junit>
 			<classpath refid="classpath" />
 			<formatter type="brief" usefile="false" />
-			<test name="tests.MultiplyTest" />
+			<test name="MultiplyTest" />
 		</junit>
 	</target>
 	
