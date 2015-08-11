@@ -1,4 +1,4 @@
-package center;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,7 @@ public class MultiplyTest {
 
 	@Test
 	public void testMultiply() {
-		HelloWorld test = new HelloWorld();
+		center.HelloWorld test = new center.HelloWorld();
 		int result = test.multiply(3, 4);
 		assertEquals(12, result);
 	}

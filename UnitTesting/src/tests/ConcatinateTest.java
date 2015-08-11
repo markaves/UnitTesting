@@ -1,4 +1,4 @@
-package center;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,7 @@ public class ConcatinateTest {
 
 	@Test
 	public void testConcatinate() {
-		HelloWorld test = new HelloWorld();
+		center.HelloWorld test = new center.HelloWorld();
 		String result = test.concatinate("one", "two");
 		assertEquals("onetwo", result);
 	}
