@@ -39,13 +39,21 @@
     </target>
    <property file="build.properties"/>
 
+	<target name="test" depends="run">
+		<junit>
+			<classpath refid="classpath" />
+			<formatter type="brief" usefile="false" />
+			<test name="AllTests" />
+		</junit>
+	</target>
+	
    <target name="info">
         <echo>Apache Ant version is ${ant.version} - You are at ${sitename} </echo>
    </target>
 
     <target name="clean-build" depends="clean,jar"/>
 
-    <target name="main" depends="clean,run,info"/>
+    <target name="main" depends="clean,run,test,info"/>
 
 </project>
     
