@@ -40,9 +40,12 @@
    <property file="build.properties"/>
 
 	<target name="test" depends="run">
-		<junit printsummary="on">
+		<junit printsummary="yes" showoutput="yes">
 			<classpath refid="classpath" />
-			<test name="tests.MultiplyTest" />
+			<fileset dir="${src.dir}">
+				<include name="AllTests.java"/>
+			</fileset>	
+				
 		</junit>
 	</target>
 	
