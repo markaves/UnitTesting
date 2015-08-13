@@ -43,7 +43,7 @@
 		<junit printsummary="yes" showoutput="yes">
 			<classpath refid="classpath" />
 			<classpath location="${classes.dir}" />	
-			<test name="tests.MultiplyTest" haltonfailure="no" >
+			<test name="tests.AllTests" haltonfailure="no" >
 
 			</test>
 		</junit>
